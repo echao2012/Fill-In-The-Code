@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Question</h5>
+                    <p>
+                        <strong>ID</strong>: {{question.id}}
+                    </p>
+                    <p>
+                        <strong>Text</strong>: {{question.text}}
+                    </p>
+                    <p>
+                        <strong>Answers</strong>:
+                        {{#each question.Answers}}
+                            <li data-id="{{this.id}}" class="list-group-item">
+                                {{this.text}}
+                            </li>
+                        {{/each}}
+                    </p>
+                    <a href="/">← Back To Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
