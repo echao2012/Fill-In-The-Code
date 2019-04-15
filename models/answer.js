@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        correct_answer_index: {
+        correctAnswerIndex: {
             type: DataTypes.INTEGER,
             default: -1
         }

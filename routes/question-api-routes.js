@@ -5,7 +5,9 @@ module.exports = function(app) {
     app.get("/api/questions", function(req, res) {
         db.Question.findAll({
             include: [db.Answer]
-        }).then(dbQuestion => res.json(dbQuestion));
+        }).then(function(dbQuestion) {
+            res.json(dbQuestion);
+        });
     });
 
     // Get a single question by id
@@ -15,12 +17,16 @@ module.exports = function(app) {
                 id: req.params.id
             },
             include: [db.Answer]
-        }).then(dbQuestion => res.json(dbQuestion));
+        }).then(function(dbQuestion) {
+            res.json(dbQuestion);
+        });
     });
 
     // Create a new question
     app.post("/api/questions", function(req, res) {
-        db.Question.create(req.body).then(dbQuestion => res.json(dbQuestion));
+        db.Question.create(req.body).then(function(dbQuestion) {
+            res.json(dbQuestion);
+        });
     });
 
     // Delete a question by id
@@ -29,6 +35,8 @@ module.exports = function(app) {
             where: {
                 id: req.params.id
             }
-        }).then(dbQuestion => res.json(dbQuestion));
+        }).then(function(dbQuestion) {
+            res.json(dbQuestion);
+        });
     });
 };

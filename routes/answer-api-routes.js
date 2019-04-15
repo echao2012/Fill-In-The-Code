@@ -12,7 +12,9 @@ module.exports = function(app) {
         db.Answer.findAll({
             where: query,
             include: [db.Question]
-        }).then(dbAnswer => res.json(dbAnswer));
+        }).then(function(dbAnswer) {
+            res.json(dbAnswer);
+        });
     });
 
     // Get a single answer by id
@@ -22,12 +24,16 @@ module.exports = function(app) {
                 id: req.aprams.id
             },
             include: [db.Question]
-        }).then(dbAnswer => res.json(dbAnswer));
+        }).then(function(dbAnswer) {
+            res.json(dbAnswer);
+        });
     });
 
     // Create a new answer
     app.post("/api/answers", function(req, res) {
-        db.Answer.create(req.body).then(dbAnswer => res.json(dbAnswer));
+        db.Answer.create(req.body).then(function(dbAnswer) {
+            res.json(dbAnswer);
+        });
     });
 
     // Delete an answer by id
@@ -36,6 +42,8 @@ module.exports = function(app) {
             where: {
                 id: req.params.id
             }
-        }).then(dbAnswer => res.json(dbAnswer));
+        }).then(function(dbAnswer) {
+            res.json(dbAnswer);
+        });
     });
 };
