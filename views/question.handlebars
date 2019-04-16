@@ -1,26 +1,47 @@
-<div class="container">
+<div>
     <div class="row">
-        <div class="col-8 offset-2">
-            <div class="card mt-4">
-                <div class="card-body">
-                    <h5 class="card-title">Question</h5>
-                    <p>
-                        <strong>ID</strong>: {{question.id}}
-                    </p>
-                    <p>
-                        <strong>Text</strong>: {{question.text}}
-                    </p>
-                    <p>
-                        <strong>Answers</strong>:
-                        {{#each question.Answers}}
-                            <li data-id="{{this.id}}" class="list-group-item">
-                                {{this.text}}
-                            </li>
-                        {{/each}}
-                    </p>
-                    <a href="/">← Back To Home</a>
-                </div>
-            </div>
+        <div class="subjects">
+            {{!-- <button id="skip">HTML</button>
+            <button id="skip">Javascript</button>
+            <button id="skip">Node.js</button> --}}
+            <button type="button" class="btn btn-outline-light">HTML</button>
+            <button type="button" class="btn btn-outline-light">Javascript</button>
+            <button type="button" class="btn btn-outline-light">Node.JS</button>
         </div>
     </div>
 </div>
+
+<div>
+    <div class="row">
+        <div class="question">
+            {{!-- <h5 class="card-title">Question</h5> --}}
+            <p>
+                {{!-- <strong>ID</strong>: {{question.id}} --}}
+            </p>
+            <p style="text-cnet">
+                {{!-- <strong>Text</strong>: {{question.text}} --}}
+                <strong>{{question.text}}</strong>
+            </p>
+            <p>
+                {{!-- <strong>Answers</strong>: --}}
+                <br>
+                {{#each question.Answers}}
+                <button data-id="{{this.id}}" class="btn btn-info">
+                    {{this.text}}
+                </button>
+                {{/each}}
+            </p>
+            <button id="skip">Skip</button>
+            <br>
+            <a href="/">← Back To Home</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    $(document).ready(function () {
+        $(".btn").click(function () {
+            $("{{this.id}}").animate({ bottom: "+=100px" });
+        });
+    });
+</script>
