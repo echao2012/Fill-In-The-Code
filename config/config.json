@@ -8,7 +8,7 @@
     },
     "test": {
         "username": "root",
-        "password": null,
+        "password": "gra120!@RRSQL",
         "database": "testdb",
         "host": "localhost",
         "dialect": "mysql",
