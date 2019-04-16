@@ -1,14 +1,14 @@
 {
     "development": {
         "username": "root",
-        "password": "adidas87!",
+        "password": null,
         "database": "quiz_db",
         "host": "localhost",
         "dialect": "mysql"
     },
     "test": {
         "username": "root",
-        "password": "adidas87!",
+        "password": null,
         "database": "testdb",
         "host": "localhost",
         "dialect": "mysql",
