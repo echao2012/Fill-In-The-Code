@@ -4,9 +4,9 @@
             {{!-- <button id="skip">HTML</button>
             <button id="skip">Javascript</button>
             <button id="skip">Node.js</button> --}}
-            <button type="button" class="btn btn-outline-light">HTML</button>
-            <button type="button" class="btn btn-outline-light">Javascript</button>
-            <button type="button" class="btn btn-outline-light">Node.JS</button>
+            <button type="button" class="btn btn-outline-light buttonGuess">HTML</button>
+            <button type="button" class="btn btn-outline-light buttonGuess">Javascript</button>
+            <button type="button" class="btn btn-outline-light buttonGuess">Node.JS</button>
         </div>
     </div>
 </div>
@@ -26,7 +26,7 @@
                 {{!-- <strong>Answers</strong>: --}}
                 <br>
                 {{#each question.Answers}}
-                <button data-id="{{this.id}}" class="btn btn-info">
+                <button data-id="{{this.id}}" class="btn btn-info buttonGuess">
                     {{this.text}}
                 </button>
                 {{/each}}
@@ -38,10 +38,3 @@
     </div>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    $(document).ready(function () {
-        $(".btn").click(function () {
-            $("{{this.id}}").animate({ bottom: "+=100px" });
-        });
-    });
-</script>
