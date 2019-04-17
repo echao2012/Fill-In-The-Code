@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "gra120!@RRSQL",
+        "password": "CodingClass", 
         "database": "quiz_db",
         "host": "localhost",
         "dialect": "mysql"
