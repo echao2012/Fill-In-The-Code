@@ -280,3 +280,16 @@ hr{
     text-align: center;
     margin: 3% auto;
 }
+
+.questionBlank{
+    background-color: grey;
+}
+
+.questionBlankSelected{
+    background-color: yellow;
+}
+
+.questionBlankCorrect{
+    background-color: white;
+    color: green;
+}

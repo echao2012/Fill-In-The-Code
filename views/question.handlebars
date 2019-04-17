@@ -14,19 +14,13 @@
 <div>
     <div class="row">
         <div class="question">
-            {{!-- <h5 class="card-title">Question</h5> --}}
-            <p>
-                {{!-- <strong>ID</strong>: {{question.id}} --}}
-            </p>
-            <p style="text-cnet">
-                {{!-- <strong>Text</strong>: {{question.text}} --}}
+            <p id="questionText" style="text-cnet">
                 <strong>{{question.text}}</strong>
             </p>
             <p>
-                {{!-- <strong>Answers</strong>: --}}
                 <br>
                 {{#each question.Answers}}
-                <button data-id="{{this.id}}" class="btn btn-info buttonGuess">
+                <button data-correctAnswerIndex="{{this.correctAnswerIndex}}" class="btn btn-info buttonGuess">
                     {{this.text}}
                 </button>
                 {{/each}}
@@ -37,4 +31,6 @@
         </div>
     </div>
 </div>
+
+<script src="/js/question.js"></script>
 
