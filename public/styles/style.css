@@ -256,6 +256,7 @@ hr{
 
 .question {
     width: 90%;
+    height:500px;
     box-shadow: 10px 10px 40px grey;
     border-radius: 12px;
     margin: 10% auto 0 auto;
@@ -264,19 +265,53 @@ hr{
     background-color: white;
 }
 
+
 .buttonGuess {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     box-shadow: 6px 9px #999;
     background-color: black;
     display: flexbox;
+    color:white;
+    border-radius:1.25rem;
 }
 
-#skip{
-    font-size: 2.5rem;
-    float: right;
+.buttonTopic{
+    font-size: 2.0rem;
+    box-shadow: 6px 9px #9AE;
+    background-color: black;
+    display: flexbox;
+    color:white;
+    border-radius:1.25rem;
 }
 
-.subjects{
-    text-align: center;
-    margin: 3% auto;
+.buttonHome{
+    font-size: 1.5rem;
+    box-shadow: 6px 9px #999;
+    background-color: black;
+    display: flexbox;
+    color:white;
+    border-radius:1.25rem;
+}
+
+.buttonSkip{
+    font-size: 1.5rem;
+    box-shadow: 6px 9px #999;
+    background-color: black;
+    display: flexbox;
+    color:white;
+    border-radius:1.25rem;
+}
+
+.bottomRow{
+    margin:15x;
+}
+
+.button:hover {
+    background-color: gray;
+}
+
+.button:active {
+    background-color:gray;
+    box-shadow: 6px 9px #999;
+    transform: translate3d(4px);
 }
