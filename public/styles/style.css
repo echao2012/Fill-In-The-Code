@@ -249,3 +249,34 @@ hr{
     top: 21px;
     left: 8px;
     }
+
+.list-group-item {
+    line-height: 2.5;
+}
+
+.question {
+    width: 90%;
+    box-shadow: 10px 10px 40px grey;
+    border-radius: 12px;
+    margin: 10% auto 0 auto;
+    padding: 5%;
+    font-size: 2.5rem;
+    background-color: white;
+}
+
+.buttonGuess {
+    font-size: 2.5rem;
+    box-shadow: 6px 9px #999;
+    background-color: black;
+    display: flexbox;
+}
+
+#skip{
+    font-size: 2.5rem;
+    float: right;
+}
+
+.subjects{
+    text-align: center;
+    margin: 3% auto;
+}
