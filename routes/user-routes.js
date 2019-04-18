@@ -62,15 +62,11 @@ module.exports = function(app) {
         }
     };
   
-  // Google oAuth details
-  var clID = "182483596329-l6vf99mvcj2uisk6p8tg3tb119cvebm3.apps.googleusercontent.com";
-  var clSE = "0-nW6VeIx92-e3oWjlxB9uVO";
-  
   // Set up passport strategy
   passport.use(new GoogleStrategy(  
     {
-      clientID: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_ID || clID,
-      clientSecret: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_SECRET || clSE,
+      clientID: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_ID || process.env.clID,
+      clientSecret: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_SECRET || process.env.clSE,
       // callbackURL: 'https://fillinthecode.herokuapp.com/auth/google/callback',
       callbackURL: 'http://localhost:3000/auth/google/callback',
       scope: ['email'],
