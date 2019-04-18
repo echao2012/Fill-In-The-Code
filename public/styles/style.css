@@ -28,10 +28,9 @@ hr{
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-#my-signin2{
-    display: inline-block;
-    margin: auto;
-    margin: 0 0 20px 0;
+.heading{
+    color: white;
+    font-family: 'Dosis', 'Open Sans Condensed', sans-serif;
 }
 
 
@@ -43,37 +42,43 @@ hr{
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 40px;
+}
+
+.icon{
+    display: inline-block;
+    margin: auto;
+    padding: 10px 40px;
+    margin: 10px;
+    box-shadow: 3px 3px 1px black;
+    border-radius: 10px;
 }
 
 #html{
-    display: inline-block;
-    margin: auto;
     background-color: #ef6732;
-    padding: 10px 40px;
-    margin: 10px;
-    box-shadow: 3px 3px 1px black;
-    border-radius: 10px;
 }
 
 #css{
-    display: inline-block;
-    margin: auto;
     background-color: #34acdb;
-    padding: 10px 40px;
-    margin: 10px;
-    box-shadow: 3px 3px 1px black;
-    border-radius: 10px;
 }
 
 #jscript{
-    display: inline-block;
-    margin: auto;
     background-color: #efbe37;
-    padding: 10px 33px;
-    margin: 10px;
-    box-shadow: 3px 3px 1px black;
-    border-radius: 10px;
+}
+
+#nodejs{
+    background-color: #B0D26A;
+}
+
+#handlebars{
+    background-color: #F49332;
+}
+
+#sequelize{
+    background-color: #266da8;
+}
+
+#mysql{
+    background-color: #0f7caa;
 }
 
 .modal-body{
@@ -290,9 +295,6 @@ hr{
     height: 125.48;
 }
 
-#skip{
-    font-size: 2.5rem;
-    float: right;
 .buttonTopic{
     font-size: 2.0rem;
     box-shadow: 6px 9px #9AE;
@@ -304,7 +306,6 @@ hr{
 
 .buttonHome{
     font-size: 1.5rem;
-    box-shadow: 6px 9px #999;
     background-color: black;
     display: flexbox;
     color:white;
@@ -313,7 +314,6 @@ hr{
 
 .buttonSkip{
     font-size: 1.5rem;
-    box-shadow: 6px 9px #999;
     background-color: black;
     display: flexbox;
     color:white;
@@ -332,4 +332,14 @@ hr{
     background-color:gray;
     box-shadow: 6px 9px #999;
     transform: translate3d(4px);
+}
+
+.card-body, .btn{
+    font-family:  'Dosis', 'Open Sans Condensed', sans-serif;
+}
+
+.bottomRow{
+    position: relative;
+    bottom: -40px;
+    margin-bottom: 5px;
 }
