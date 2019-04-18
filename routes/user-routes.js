@@ -62,7 +62,7 @@ module.exports = function (app) {
     });
 
     // Create API endpoints
-    app.get("/protected", accessProtectionMiddleware, (req, res) => {
+    app.get("/protected", accessProtectionMiddleware, function(req, res) {
 
         res.json({
             message: "You have accessed the protected endpoint!",
@@ -80,7 +80,7 @@ module.exports = function (app) {
         // connection.query(queryString);
     });
 
-    app.get("/logout", accessProtectionMiddleware, function (req, res) {
+    app.get("/logout", accessProtectionMiddleware, function(req, res) {
         req.logout();
         res.redirect("/");
     });
@@ -89,7 +89,7 @@ module.exports = function (app) {
 
 
 // Checks if a user is logged in
-const accessProtectionMiddleware = (req, res, next) => {
+const accessProtectionMiddleware = function(req, res, next){
     if (req.isAuthenticated()) {
         next();
     } else {
