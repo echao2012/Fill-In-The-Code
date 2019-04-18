@@ -1,7 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-var session = require('express-session');
+var session = require("express-session");
 var passport = require("passport");
 
 var db = require("./models");
@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 
 // Add session support
 app.use(session({  
-    secret: process.env.SESSION_SECRET || 'default_session_secret',
+    secret: process.env.SESSION_SECRET || "default_session_secret",
     resave: false,
     saveUninitialized: false,
 }));

@@ -1,5 +1,5 @@
 var db = require("../models");
-const passport = require("../config/passport.js");
+var passport = require("../config/passport.js");
 
 module.exports = function (app) {
 
