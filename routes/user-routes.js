@@ -89,7 +89,7 @@ module.exports = function (app) {
 
 
 // Checks if a user is logged in
-const accessProtectionMiddleware = function(req, res, next){
+var accessProtectionMiddleware = function(req, res, next){
     if (req.isAuthenticated()) {
         next();
     } else {
