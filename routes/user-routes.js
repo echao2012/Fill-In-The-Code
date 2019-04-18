@@ -41,7 +41,7 @@ module.exports = function (app) {
             // console.log(req.user);
             db.User.create({
                 email: req.user.emails[0].value
-            }).then(function(res){
+            }).then(function(){
                 res.redirect("/");
             });
         }
