@@ -10,6 +10,18 @@ module.exports = function(app) {
         });
     });
 
+    // Get all questions for the category
+    app.get("/api/questions/topic/:topic", function(req, res) {
+        db.Question.findAll({
+            where: {
+                topic: req.params.topic
+            },
+            include: [db.Answer]
+        }).then(function(dbQuestion) {
+            res.json(dbQuestion);
+        });
+    });
+
     // Get a single question by id
     app.get("/api/questions/:id", function(req, res) {
         db.Question.findOne({
