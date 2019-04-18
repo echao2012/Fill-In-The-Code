@@ -14,8 +14,8 @@ passport.use(new GoogleStrategy(
     {
         clientID: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_ID || process.env.clID,
         clientSecret: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_SECRET || process.env.clSE,
-        // callbackURL: 'https://fillinthecode.herokuapp.com/auth/google/callback',
-        callbackURL: "http://localhost:3000/auth/google/callback",
+        callbackURL: "https://fillinthecode.herokuapp.com/auth/google/callback",
+        // callbackURL: "http://localhost:3000/auth/google/callback",
         scope: ["email"],
     },
     // This is a "verify" function required by all Passport strategies
@@ -23,7 +23,7 @@ passport.use(new GoogleStrategy(
         console.log("Our user authenticated with Google, and Google sent us back this profile info identifying the authenticated user.");
         // console.log('Our user authenticated with Google, and Google sent us back this profile info identifying the authenticated user:', profile); // more verbose
         return cb(null, profile);
-    },
+    }
 ));
 
 module.exports = passport;
