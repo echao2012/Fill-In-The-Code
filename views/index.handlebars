@@ -9,7 +9,7 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent22">
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
+        <ul class="nav navbar-nav navbar-right">
             <!-- <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li> -->
@@ -148,7 +148,12 @@
         </div>
     </div>
 
-    <div class="g-signin2" data-onsuccess="onSignIn">
+<div class="row icons">
+		<a href="/auth/google/callback">Log In With Google</a><br> 
+		<a href="/protected">Go To Protected Endpoint</a> 
+</div>
+
+    {{!-- <div class="g-signin2" data-onsuccess="onSignIn"> --}}
         <!-- Sign In/ Sign Up Buttons -->
         <!-- <button type="button" id="sign-button1" class="btn btn-outline-primary btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
             <a class="desc-link" href="#" data-toggle="modal" data-target="#googleModal">Sign In</a>      
@@ -156,7 +161,7 @@
         <!--<button type="button" id="sign-button2" class="btn btn-outline-primary btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
             Sign Up
         </button> -->
-    </div>
+    {{!-- </div> --}}
 </div>
 
 <!-- JQuery -->

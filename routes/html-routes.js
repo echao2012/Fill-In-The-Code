@@ -1,4 +1,5 @@
 var db = require("../models");
+var passport = require("../server");
 
 module.exports = function(app) {
     // Load index page
