@@ -22,7 +22,7 @@ $("#questionText").on("click", ".questionBlank", function() {
     selectBlank($(this).attr("data-index"));
 });
 
-$("#skip").on("click", function() {
+$(".buttonSkip").on("click", function() {
     nextQuestion();
 });
 
@@ -31,7 +31,7 @@ function nextQuestion() {
     totalBlanks = 0;
     answered = [];
 
-    $("#skip").text("Skip");
+    $(".buttonSkip").text("Skip");
     iQuestion++;
     displayQuestion(questions[iQuestion]);
     convertBlanksToSpans();
@@ -44,7 +44,7 @@ function displayQuestion(questionInfo) {
     $("#answerButtons").empty();
     questionInfo.Answers.forEach(function(answer) {
         var newBtn = $("<button>");
-        newBtn.addClass("btn btn-info buttonGuess");
+        newBtn.addClass("btn btn-lite buttonGuess");
         newBtn.text(answer.text);
         newBtn.attr("data-correctAnswerIndex", answer.correctAnswerIndex);
         $("#answerButtons").append(newBtn);
@@ -108,7 +108,7 @@ function selectNextBlank() {
             selectBlank(nextBlank);
         } else {
             // No more blanks, question is complete
-            $("#skip").text("Next");
+            $(".buttonSkip").text("Next");
             $("#answerButtons").empty();
         }
     }
