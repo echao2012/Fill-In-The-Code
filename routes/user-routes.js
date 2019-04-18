@@ -52,7 +52,7 @@ module.exports = function (app) {
             where: {
                 email: req.user.emails[0].value
             }
-        }).then((dbUser) => {
+        }).then(function(dbUser) {
             res.json({
                 id: dbUser.id,
                 email: dbUser.email,
