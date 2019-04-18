@@ -3,9 +3,9 @@
 <div>
     <div class="row">
         <div class="subjects">
-            <button type="button" class="btn btn-outline-light buttonGuess"><img src="/images/html5.png" style="max-height: 112px; max-width: 84px;"></button>
-            <button type="button" class="btn btn-outline-light buttonGuess"><img src="/images/css3.png" style="max-height: 112px; max-width: 84px;"></button>
-            <button type="button" class="btn btn-outline-light buttonGuess node"><img src="/images/js.png" style="max-height: 112px; max-width: 84px;"></button>
+            <a href="/topic/html"><button type="button" class="btn btn-outline-light buttonGuess"><img src="/images/html5.png" style="max-height: 112px; max-width: 84px;"></button></a>
+            <a href="/topic/css"><button type="button" class="btn btn-outline-light buttonGuess"><img src="/images/css3.png" style="max-height: 112px; max-width: 84px;"></button></a>
+            <a href="/topic/js"><button type="button" class="btn btn-outline-light buttonGuess node"><img src="/images/js.png" style="max-height: 112px; max-width: 84px;"></button></a>
         </div>
     </div>
 </div>
@@ -13,19 +13,9 @@
 <div>
     <div class="row">
         <div class="question">
-            <p>
-            </p>
-            <p style="text-cnet">
-                <strong>{{question.text}}</strong>
-            </p>
-            <p>
-                <br>
-                {{#each question.Answers}}
-                <button data-id="{{this.id}}" class="btn btn-light buttonGuess">
-                    {{this.text}}
-                </button>
-                {{/each}}
-            </p>
+            <p id="questionText" style="text-cnet"></p>
+            <br>
+            <p id="answerButtons"></p>
         </div>
         <div class="row">
             <div class="bottomRow">
@@ -37,3 +27,5 @@
         </div>
     </div>
 </div>
+
+<script src="/js/question.js"></script>
