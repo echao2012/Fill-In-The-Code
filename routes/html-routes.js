@@ -9,17 +9,8 @@ module.exports = function(app) {
     });
 
     // Load question page and pass in a question by id
-    app.get("/question/:id", function(req, res) {
-        db.Question.findOne({
-            where: {
-                id: req.params.id
-            },
-            include: [db.Answer]
-        }).then(function(dbQuestion) {
-            res.render("question", {
-                question: dbQuestion
-            });
-        });
+    app.get("/topic/:topic", function(req, res) {
+        res.render("question");
     });
 
     // Render 404 page for any unmatched routes

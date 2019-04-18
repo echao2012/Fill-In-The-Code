@@ -1,13 +1,17 @@
-var currentBlank = 0;
-var totalBlanks = 0;
-var answered = [];
+var currentBlank, totalBlanks, answered;
+
+var iQuestion = -1;
+var questions = []
 
 $(document).ready(function() {
-    convertBlanksToSpans();
-    selectBlank(currentBlank);
+    var topic = window.location.href.split("/").pop();
+    $.get("/api/questions/topic/" + topic, function(data) {
+        questions = data;
+        nextQuestion();
+    });
 });
 
-$(".buttonGuess").on("click", function() {
+$("#answerButtons").on("click", ".buttonGuess", function() {
     if(parseInt($(this).attr("data-correctAnswerIndex")) === parseInt(currentBlank)) {
         // Answer was correct
         correctAnswer($(this));
@@ -18,9 +22,37 @@ $("#questionText").on("click", ".questionBlank", function() {
     selectBlank($(this).attr("data-index"));
 });
 
+$("#skip").on("click", function() {
+    nextQuestion();
+});
+
+function nextQuestion() {
+    currentBlank = 0;
+    totalBlanks = 0;
+    answered = [];
+
+    iQuestion++;
+    displayQuestion(questions[iQuestion]);
+    convertBlanksToSpans();
+    selectBlank(currentBlank);
+}
+
+function displayQuestion(questionInfo) {
+    $("#questionText").text(questionInfo.text);
+    
+    $("#answerButtons").empty();
+    questionInfo.Answers.forEach(function(answer) {
+        var newBtn = $("<button>");
+        newBtn.addClass("btn btn-info buttonGuess");
+        newBtn.text(answer.text);
+        newBtn.attr("data-correctAnswerIndex", answer.correctAnswerIndex);
+        $("#answerButtons").append(newBtn);
+    });
+}
+
 function convertBlanksToSpans() {
     var questionHtml = $("#questionText").html();
-    var token = "???";
+    var token = "????";
     var iToken = questionHtml.indexOf(token, 0);
     var iBlank = 0;
 
@@ -61,8 +93,6 @@ function selectBlank(iSpan) {
     // Change the colors to show which blank is selected
     var selectedSpan = $("#questionText").find("[data-index='" + currentBlank + "']");
     selectedSpan.removeClass("questionBlank").addClass("questionBlankSelected");
-
-    
 }
 
 function selectNextBlank() {

@@ -14,17 +14,9 @@
 <div>
     <div class="row">
         <div class="question">
-            <p id="questionText" style="text-cnet">
-                <strong>{{question.text}}</strong>
-            </p>
-            <p>
-                <br>
-                {{#each question.Answers}}
-                <button data-correctAnswerIndex="{{this.correctAnswerIndex}}" class="btn btn-info buttonGuess">
-                    {{this.text}}
-                </button>
-                {{/each}}
-            </p>
+            <p id="questionText" style="text-cnet"></p>
+            <br>
+            <p id="answerButtons"></p>
             <button id="skip">Skip</button>
             <br>
             <a href="/">← Back To Home</a>
