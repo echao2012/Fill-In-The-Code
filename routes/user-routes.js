@@ -33,21 +33,21 @@ module.exports = function (app) {
     // =============================================================
 
     // This is where Google sends users once they authenticate with Google
-    app.get('/auth/google/callback',
-        passport.authenticate('google', { failureRedirect: '/', session: true }),
+    app.get("/auth/google/callback",
+        passport.authenticate("google", { failureRedirect: "/", session: true }),
         function(req, res) {
-            console.log('Woohoo, we authenticated.');
+            console.log("Woohoo, we authenticated.");
             // console.log('wooo we authenticated, here is our user object:', req.user); // verbose
             // console.log(req.user);
             db.User.create({
                 email: req.user.emails[0].value
-            }).then((results) => {
-                res.redirect('/');
+            }).then(function(res){
+                res.redirect("/");
             });
         }
     );
 
-    app.get('/api/user_data', (req, res) => {
+    app.get("/api/user_data", (req, res) => {
         db.User.findOne({
             where: {
                 email: req.user.emails[0].value
@@ -57,15 +57,15 @@ module.exports = function (app) {
                 id: dbUser.id,
                 email: dbUser.email,
                 createdAt: dbUser.createdAt
-            })
-        })
-    })
+            });
+        });
+    });
 
     // Create API endpoints
-    app.get('/protected', accessProtectionMiddleware, (req, res) => {
+    app.get("/protected", accessProtectionMiddleware, (req, res) => {
 
         res.json({
-            message: 'You have accessed the protected endpoint!',
+            message: "You have accessed the protected endpoint!",
             yourID: req.user.id,
             yourEmail: req.user.emails[0].value
         });
@@ -80,9 +80,9 @@ module.exports = function (app) {
         // connection.query(queryString);
     });
 
-    app.get('/logout', accessProtectionMiddleware, function (req, res) {
+    app.get("/logout", accessProtectionMiddleware, function (req, res) {
         req.logout();
-        res.redirect('/');
+        res.redirect("/");
     });
 };
 
@@ -94,7 +94,7 @@ const accessProtectionMiddleware = (req, res, next) => {
         next();
     } else {
         res.status(403).json({
-            message: 'must be logged in to continue',
+            message: "must be logged in to continue",
         });
     }
 };
