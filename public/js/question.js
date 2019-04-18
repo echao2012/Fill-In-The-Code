@@ -1,7 +1,7 @@
 var currentBlank, totalBlanks, answered;
 
 var iQuestion = -1;
-var questions = []
+var questions = [];
 
 $(document).ready(function() {
     var topic = window.location.href.split("/").pop();
@@ -31,6 +31,7 @@ function nextQuestion() {
     totalBlanks = 0;
     answered = [];
 
+    $("#skip").text("Skip");
     iQuestion++;
     displayQuestion(questions[iQuestion]);
     convertBlanksToSpans();
@@ -105,6 +106,10 @@ function selectNextBlank() {
         var nextBlank = answered.findIndex(function(answer) { return answer === false; });
         if(nextBlank >= 0) {
             selectBlank(nextBlank);
+        } else {
+            // No more blanks, question is complete
+            $("#skip").text("Next");
+            $("#answerButtons").empty();
         }
     }
 }
