@@ -315,16 +315,3 @@ hr{
     box-shadow: 6px 9px #999;
     transform: translate3d(4px);
 }
-
-.questionBlank{
-    background-color: grey;
-}
-
-.questionBlankSelected{
-    background-color: yellow;
-}
-
-.questionBlankCorrect{
-    background-color: white;
-    color: green;
-}
