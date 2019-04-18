@@ -35,7 +35,7 @@ module.exports = function (app) {
     // This is where Google sends users once they authenticate with Google
     app.get('/auth/google/callback',
         passport.authenticate('google', { failureRedirect: '/', session: true }),
-        (req, res) => {
+        function(req, res) {
             console.log('Woohoo, we authenticated.');
             // console.log('wooo we authenticated, here is our user object:', req.user); // verbose
             // console.log(req.user);

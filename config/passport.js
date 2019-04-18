@@ -1,11 +1,11 @@
 var passport = require("passport");
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-passport.serializeUser((user, done) => {  
+passport.serializeUser(function(user, done){  
     done(null, user);
 });
 
-passport.deserializeUser((userDataFromCookie, done) => {  
+passport.deserializeUser(function(userDataFromCookie, done) {  
     done(null, userDataFromCookie);
 });
 
