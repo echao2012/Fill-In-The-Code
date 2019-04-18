@@ -1,6 +1,8 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var session = require('express-session');
+var passport = require("passport");
 
 var db = require("./models");
 
@@ -20,6 +22,15 @@ app.engine(
     })
 );
 app.set("view engine", "handlebars");
+
+// Add session support
+app.use(session({  
+    secret: process.env.SESSION_SECRET || 'default_session_secret',
+    resave: false,
+    saveUninitialized: false,
+}));
+app.use(passport.initialize());  
+app.use(passport.session());
 
 // Routes
 require("./routes/question-api-routes")(app);
