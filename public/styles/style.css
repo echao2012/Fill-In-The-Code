@@ -295,6 +295,11 @@ hr{
     height: 125.48;
 }
 
+#skip{
+    font-size: 2.5rem;
+    float: right;
+}
+
 .buttonTopic{
     font-size: 2.0rem;
     box-shadow: 6px 9px #9AE;
@@ -342,4 +347,15 @@ hr{
     position: relative;
     bottom: -40px;
     margin-bottom: 5px;
+.questionBlank{
+    background-color: grey;
+}
+
+.questionBlankSelected{
+    background-color: yellow;
+}
+
+.questionBlankCorrect{
+    background-color: white;
+    color: green;
 }
