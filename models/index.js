@@ -13,8 +13,8 @@ if (config.use_env_variable) {
 } else {
     var sequelize = new Sequelize(
         config.database,
-        config.username,
-        config.password,
+        process.env.MYSQL_USER,
+        process.env.MYSQL_PW,
         config
     );
 }

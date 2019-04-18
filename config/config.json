@@ -1,0 +1,17 @@
+{
+    "development": {
+        "database": "quiz_db",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "test": {
+        "database": "testdb",
+        "host": "localhost",
+        "dialect": "mysql",
+        "logging": false
+    },
+    "production": {
+        "use_env_variable": "JAWSDB_URL",
+        "dialect": "mysql"
+    }
+}
