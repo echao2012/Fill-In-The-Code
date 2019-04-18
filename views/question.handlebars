@@ -33,6 +33,9 @@
                     <a href="/">← Back To Home</a>
                 </div>
             </div>
+            <button type="button" class="btn btn-outline-dark buttonTopic">HTML</button>
+            <button type="button" class="btn btn-outline-dark buttonTopic">Javascript</button>
+            <button type="button" class="btn btn-outline-dark buttonTopic">Node.JS</button>
         </div>
     </div>
 </div>
@@ -40,27 +43,27 @@
 <div>
     <div class="row">
         <div class="question">
-            {{!-- <h5 class="card-title">Question</h5> --}}
             <p>
-                {{!-- <strong>ID</strong>: {{question.id}} --}}
             </p>
             <p style="text-cnet">
-                {{!-- <strong>Text</strong>: {{question.text}} --}}
                 <strong>{{question.text}}</strong>
             </p>
             <p>
-                {{!-- <strong>Answers</strong>: --}}
                 <br>
                 {{#each question.Answers}}
-                <button data-id="{{this.id}}" class="btn btn-info buttonGuess">
+                <button data-id="{{this.id}}" class="btn btn-light buttonGuess">
                     {{this.text}}
                 </button>
                 {{/each}}
             </p>
-            <button id="skip">Skip</button>
-            <br>
-            <a href="/">← Back To Home</a>
+        </div>
+        <div class="row">
+            <div class="bottomRow">
+            <div class="d-flex justify-content-around mb-3">
+                <button class="btn btn-outline-light buttonHome"><a href="/">← Back To Home</a></button>
+                <button class="btn btn-outline-light buttonSkip">Skip</button>
+            </div>
+            </div>
         </div>
     </div>
 </div>
-
