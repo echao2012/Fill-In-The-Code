@@ -35,52 +35,73 @@ module.exports = function (app) {
     // This is where Google sends users once they authenticate with Google
     app.get("/auth/google/callback",
         passport.authenticate("google", { failureRedirect: "/", session: true }),
-        function(req, res) {
+        function (req, res) {
             console.log("Woohoo, we authenticated.");
-            // console.log('wooo we authenticated, here is our user object:', req.user); // verbose
-            // console.log(req.user);
-            db.User.create({
-                email: req.user.emails[0].value
-            }).then(function(){
-                res.redirect("/");
+
+            // checks whether user's email already exists in the database
+            db.User.findAll({
+                where: {
+                    email: req.user.emails[0].value
+                }
+            }).then(function (dbUser) {
+                // if they already exist, console.log a quick note to that effect and proceed with the redirect
+                if (dbUser[0].id) {
+                    console.log("User " + dbUser[0].email + " already exists. Proceeding with login instead of another user creation.");
+                    res.redirect("/start");
+                }
+                // else create them in the database and then redirect to the homepage
+                else {
+                    db.User.create({
+                        email: req.user.emails[0].value
+                    }).then(function () {
+                        res.redirect("/start");
+                    });
+                }
             });
+
         }
     );
 
-    app.get("/api/user_data", function(req, res){
+    // route for main page once logged in
+    app.get("/start", accessProtectionMiddleware, function (req, res) {
+        res.render("start");
+    });
+
+    // Load question page and pass in a question by id
+    app.get("/topic/:topic", accessProtectionMiddleware, function (req, res) {
+        res.render("question");
+    });
+
+    // route for user's profile page
+    app.get("/profile", accessProtectionMiddleware, function (req, res) {
+        res.render("profile");
+    });
+
+    // route for looking up a user by email address
+    app.get("/api/user_data/:email", function (req, res) {
         db.User.findOne({
             where: {
-                email: req.user.emails[0].value
+                email: req.params.email
             }
-        }).then(function(dbUser) {
+        }).then(function (dbUser) {
             res.json({
-                id: dbUser.id,
                 email: dbUser.email,
                 createdAt: dbUser.createdAt
             });
         });
     });
 
-    // Create API endpoints
-    app.get("/protected", accessProtectionMiddleware, function(req, res) {
+    // test page to confirm whether user is authenticated or not
+    app.get("/protected", accessProtectionMiddleware, function (req, res) {
 
         res.json({
             message: "You have accessed the protected endpoint!",
-            yourID: req.user.id,
-            yourEmail: req.user.emails[0].value
+            email: req.user.emails[0].value
         });
 
-        // var theTime = Math.floor(Date.now() / 1000);
-        // var queryString = "INSERT INTO users (id,email) VALUES (";
-        // queryString += theTime;
-        // queryString += ", '";
-        // queryString += req.user.emails[0].value;
-        // queryString += "')";
-        // console.log(queryString);
-        // connection.query(queryString);
     });
 
-    app.get("/logout", accessProtectionMiddleware, function(req, res) {
+    app.get("/logout", accessProtectionMiddleware, function (req, res) {
         req.logout();
         res.redirect("/");
     });
@@ -89,7 +110,7 @@ module.exports = function (app) {
 
 
 // Checks if a user is logged in
-var accessProtectionMiddleware = function(req, res, next){
+var accessProtectionMiddleware = function (req, res, next) {
     if (req.isAuthenticated()) {
         next();
     } else {

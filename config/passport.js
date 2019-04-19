@@ -24,7 +24,6 @@ passport.use(new GoogleStrategy(
     {
         clientID: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_ID || process.env.clID,
         clientSecret: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_SECRET || process.env.clSE,
-        // callbackURL: "https://fillinthecode.herokuapp.com/auth/google/callback",
         callbackURL: callbackURL,
         scope: ["email"],
     },
