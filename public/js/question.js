@@ -2,11 +2,15 @@ var currentBlank, answered;
 
 var iQuestion = -1;
 var questions = [];
+var score = 0;
+var correct = 0;
+var incorrect = 0;
 
 $(document).ready(function() {
     var topic = window.location.href.split("/").pop();
     $.get("/api/questions/topic/" + topic, function(data) {
         questions = data;
+        $("#totalQuestions").text(questions.length);
         nextQuestion();
     });
 });
@@ -14,10 +18,14 @@ $(document).ready(function() {
 $("#answerButtons").on("click", ".buttonGuess", function() {
     if(parseInt($(this).attr("data-correctAnswerIndex")) === parseInt(currentBlank)) {
         // Answer was correct
+        correct++;
         correctAnswer($(this));
+        updateScore();
     } else {
         // Answer was incorrect
+        incorrect++;
         $(this).addClass("buttonIncorrect");
+        updateScore();
     }
 });
 
@@ -26,6 +34,12 @@ $("#questionText").on("click", ".questionBlank", function() {
 });
 
 $(".buttonSkip").on("click", function() {
+    answered.forEach(function(item) {
+        if(item === false) {
+            incorrect++;
+        }
+    });
+    updateScore();
     nextQuestion();
 });
 
@@ -35,6 +49,7 @@ function nextQuestion() {
 
     $(".buttonSkip").text("Skip");
     iQuestion++;
+    $("#questionNum").text(iQuestion + 1);
     displayQuestion(questions[iQuestion]);
     convertBlanksToSpans();
     selectBlank(currentBlank);
@@ -119,4 +134,9 @@ function correctAnswer(button) {
         $(".buttonSkip").text("Next");
         $("#answerButtons").empty();
     }
+}
+
+function updateScore() {
+    score = (correct / (correct + incorrect)) * 100;
+    $("#score").text(Math.round(score));
 }
