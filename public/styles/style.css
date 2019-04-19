@@ -179,16 +179,10 @@ hr{
     background-color: yellow;
 }
 
-<<<<<<< HEAD
-/* .btn{
-    max-width: 600px;
-} */
-=======
 .questionBlankCorrect{
     background-color: white;
     color: green;
 }
->>>>>>> b97890d4ce847d48218791124d9aaa22395516f8
 
 /* Nav Collapse & Links */
 /* Icon 1 */
@@ -360,7 +354,6 @@ hr{
     left: 8px;
     }
 
-<<<<<<< HEAD
 .list-group-item {
     line-height: 2.5;
 }
@@ -476,5 +469,3 @@ hr{
     color: green;
 }
 
-=======
->>>>>>> b97890d4ce847d48218791124d9aaa22395516f8
