@@ -68,7 +68,7 @@ module.exports = function (app) {
     });
 
     // Load question page and pass in a question by id
-    app.get("/topic/:topic", function (req, res) {
+    app.get("/topic/:topic", accessProtectionMiddleware, function (req, res) {
         res.render("question");
     });
 
