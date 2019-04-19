@@ -113,6 +113,10 @@ hr{
     border-radius:1.25rem;
 }
 
+.buttonIncorrect {
+    background-color: red;
+}
+
 .node{
     height: 125.48;
 }
@@ -353,4 +357,3 @@ hr{
     top: 21px;
     left: 8px;
     }
-
