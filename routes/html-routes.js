@@ -8,6 +8,10 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/start", function(req,res){
+        res.render("start");
+    });
+
     // Load question page and pass in a question by id
     app.get("/topic/:topic", function(req, res) {
         res.render("question");
