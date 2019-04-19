@@ -38,7 +38,6 @@ module.exports = function (app) {
         function(req, res) {
             console.log("Woohoo, we authenticated.");
             // console.log('wooo we authenticated, here is our user object:', req.user); // verbose
-            // console.log(req.user);
             db.User.create({
                 email: req.user.emails[0].value
             }).then(function(){
@@ -47,14 +46,13 @@ module.exports = function (app) {
         }
     );
 
-    app.get("/api/user_data", function(req, res){
+    app.get("/api/user_data/:email", function(req, res){
         db.User.findOne({
             where: {
-                email: req.user.emails[0].value
+                email: req.params.email
             }
         }).then(function(dbUser) {
             res.json({
-                id: dbUser.id,
                 email: dbUser.email,
                 createdAt: dbUser.createdAt
             });
@@ -70,14 +68,6 @@ module.exports = function (app) {
             yourEmail: req.user.emails[0].value
         });
 
-        // var theTime = Math.floor(Date.now() / 1000);
-        // var queryString = "INSERT INTO users (id,email) VALUES (";
-        // queryString += theTime;
-        // queryString += ", '";
-        // queryString += req.user.emails[0].value;
-        // queryString += "')";
-        // console.log(queryString);
-        // connection.query(queryString);
     });
 
     app.get("/logout", accessProtectionMiddleware, function(req, res) {
