@@ -333,6 +333,10 @@ hr{
     background-color: gray;
 }
 
+.buttonIncorrect {
+    background-color: red;
+}
+
 .button:active {
     background-color:gray;
     box-shadow: 6px 9px #999;
