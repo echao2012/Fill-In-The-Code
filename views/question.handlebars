@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mb-3">
     <a href="/topic/html">
         <button type="button" class="btn btn-outline-dark buttonTopic">HTML</button>
     </a>
@@ -12,24 +12,26 @@
 
 <div>
     <div class="row">
-        {{!-- <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10"> --}}
+        <div class="row topRow">
+            <div class="d-flex justify-content-around mb-3">
+                <p class="heading">Score: <span id="score">0</span></p>
+                <p class="heading">Question: <span id="questionNum"></span> of <span id="totalQuestions"></span></p>
+            </div>
+        </div>
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="question">
                 <p id="questionText" style="text-cnet;word-break: break-word;">
                 </p>
                 <br>
-                <p id="answerButtons"></p>
+                <p id="answerButtons" class="questionBlankCorrect"></p>
             </div>
         </div>
-        <div class="row">
-            <div class="bottomRow">
-                <div class="d-flex justify-content-around mb-3">
-                    <button class="btn btn-outline-light buttonHome"><a href="/">← Back To Home</a></button>
-                    <button class="btn btn-outline-light buttonSkip">Skip</button>
-                </div>
+        <div class="row bottomRow">
+            <div class="d-flex justify-content-around mb-3">
+                <button class="btn btn-outline-light buttonHome"><a href="/">← Back To Home</a></button>
+                <button class="btn btn-outline-light buttonSkip">Skip</button>
             </div>
         </div>
-        {{!-- </div> --}}
     </div>
 </div>
 

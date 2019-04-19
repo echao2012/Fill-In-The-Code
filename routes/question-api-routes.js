@@ -16,7 +16,10 @@ module.exports = function(app) {
             where: {
                 topic: req.params.topic
             },
-            include: [db.Answer]
+            include: [db.Answer],
+            order: [
+                ["id", "ASC"]
+            ]
         }).then(function(dbQuestion) {
             res.json(dbQuestion);
         });
