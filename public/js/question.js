@@ -69,7 +69,7 @@ function nextQuestion() {
 }
 
 function displayQuestion(questionInfo) {
-    $("#questionText").text(questionInfo.text);
+    $("#questionText").html(questionInfo.text);
     
     $("#answerButtons").empty();
     questionInfo.Answers.forEach(function(answer) {

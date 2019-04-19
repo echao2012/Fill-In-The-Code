@@ -63,43 +63,54 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 
 -- Javascript
 -- 1
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("You would write ???? in an alert box", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alert('Hello World');", 0, "2019-04-15", "2019-04-15", 11); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alertBox('Hello World');", -1, "2019-04-16", "2019-04-15", 11);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msg('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msgBox('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
+-- INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("You would write ???? in an alert box", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alert('Hello World');", 0, "2019-04-15", "2019-04-15", 11); -- correct answer
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alertBox('Hello World');", -1, "2019-04-16", "2019-04-15", 11);
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msg('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msgBox('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
+
+--1
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Create a for loop that prints out the numbers 1 through 10:<br><br>for(var i = ????, i < ????, i++){<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br>}", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("1", 0, "2019-04-15", "2019-04-15", 11); -- 1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("0", -1, "2019-04-16", "2019-04-15", 11);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("9", -1, "2019-04-17", "2019-04-15", 11);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("10", 1, "2019-04-17", "2019-04-15", 11); --2nd correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("11", -1, "2019-04-17", "2019-04-15", 11);
 
 -- 2
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("How do you create a function in JavaScript?: ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("function myFunction()", 0, "2019-04-15", "2019-04-15", 12); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("function:myFunction()", -1, "2019-04-16", "2019-04-15", 12);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("function = myFunction()", -1, "2019-04-17", "2019-04-15", 12);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Create a function in JavaScript called 'myfunction':<br><br>function ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("myFunction()", 0, "2019-04-15", "2019-04-15", 12); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES (":myFunction()", -1, "2019-04-16", "2019-04-15", 12);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES (" = myFunction()", -1, "2019-04-17", "2019-04-15", 12);
 
 -- 3
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("How do you call a function named 'myFunction'?: ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Call a function named 'myFunction': ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("myFunction()", 0, "2019-04-15", "2019-04-15", 13); -- correct answer
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("call myFunction()", -1, "2019-04-16", "2019-04-15", 13);
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("call function myFunction()", -1, "2019-04-17", "2019-04-15", 13);
 
 -- 4
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("You would use ???? to add a comment in JavaScript", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("<!-- This is a comment-- >", -1, "2019-04-16", "2019-04-15", 14);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("//This is a comment", 0, "2019-04-15", "2019-04-15", 14); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("'This is a comment", -1, "2019-04-17", "2019-04-15", 14);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Add a comment in JavaScript with the text 'This is a comment':<br><br> ???? This is a comment ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("<!--", -1, "2019-04-16", "2019-04-15", 14);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("//", 0, "2019-04-15", "2019-04-15", 14); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("//", 1, "2019-04-15", "2019-04-15", 14); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("/*", -1, "2019-04-17", "2019-04-15", 14);
 
 -- 5
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("???? is the correct way to write a JavaScript", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = (1:'red', 2:'green', 3:'blue')", -1, "2019-04-15", "2019-04-15", 15); 
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')", -1, "2019-04-17", "2019-04-15", 15);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = ['red', 'green', 'blue']", 0, "2019-04-16", "2019-04-15", 15); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = 'red', 'green', 'blue'", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Create an array with Javascript variable named 'colors' that has indexes red, green and blue<br>var ???? = ???? 'red', 'green', 'blue' ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("colors", 0, "2019-04-15", "2019-04-15", 15); --1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("(", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES (")", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("[", 1, "2019-04-17", "2019-04-15", 15); --2nd correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("`", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("]", 2, "2019-04-17", "2019-04-15", 15); --3rd correct answer
 
 -- 6
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Use ???? to round the number 7.25 to the nearest integer", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("rnd(7.25)", -1, "2019-04-15", "2019-04-15", 16); 
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Math.rnd(7.25)", -1, "2019-04-17", "2019-04-15", 16);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Round the number 7.25 to the nearest integer:????.????(7.25)", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("rnd", -1, "2019-04-15", "2019-04-15", 16); 
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Math", -1, "2019-04-17", "2019-04-15", 16);
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Math.round(7.25)", 0, "2019-04-16", "2019-04-15", 16); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("round(7.25)", -1, "2019-04-17", "2019-04-15", 16);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("round", -1, "2019-04-17", "2019-04-15", 16);
 
 -- 7
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("How do you find the number with the highest value of x and y?: ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
