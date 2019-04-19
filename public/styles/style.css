@@ -87,9 +87,9 @@ hr{
     margin-bottom: 10px;
 }
 
-.btn{
+/* .btn{
     max-width: 600px;
-}
+} */
 
 /* Nav Collapse & Links */
 /* Icon 1 */
@@ -266,24 +266,33 @@ hr{
 }
 
 .question {
-    width: 90%;
-    height:500px;
+    /* width: 90%; */
+    /* max-width: 100%; */
+    max-width: 100%;
+    /* height:500px; */
+    /* min-height:500px; */
     box-shadow: 10px 10px 40px grey;
     border-radius: 12px;
     margin: 10% auto 0 auto;
     padding: 5%;
-    font-size: 2.5rem;
+    font-size: 0.rem;
+    font-family: 'Nanum Gothic Coding', monospace;
     background-color: white;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 
 .buttonGuess {
-    font-size: 2.0rem;
+    font-size: 0.875rem;
     box-shadow: 6px 9px #999;
     background-color: black;
     display: flexbox;
     color:white;
     border-radius:1.25rem;
+    white-space: normal;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .node{
@@ -296,7 +305,8 @@ hr{
 }
 
 .buttonTopic{
-    font-size: 2.0rem;
+    /* font-size: 2.0rem; */
+    font-size: 0.875rem;
     box-shadow: 6px 9px #9AE;
     background-color: black;
     display: flexbox;
@@ -305,7 +315,8 @@ hr{
 }
 
 .buttonHome{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 0.875rem;
     box-shadow: 6px 9px #999;
     background-color: black;
     display: flexbox;
@@ -314,7 +325,8 @@ hr{
 }
 
 .buttonSkip{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 0.875rem;
     box-shadow: 6px 9px #999;
     background-color: black;
     display: flexbox;
