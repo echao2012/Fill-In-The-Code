@@ -1,4 +1,4 @@
-var currentBlank, totalBlanks, answered;
+var currentBlank, answered;
 
 var iQuestion = -1;
 var questions = [];
@@ -15,6 +15,9 @@ $("#answerButtons").on("click", ".buttonGuess", function() {
     if(parseInt($(this).attr("data-correctAnswerIndex")) === parseInt(currentBlank)) {
         // Answer was correct
         correctAnswer($(this));
+    } else {
+        // Answer was incorrect
+        $(this).addClass("buttonIncorrect");
     }
 });
 
@@ -28,7 +31,6 @@ $(".buttonSkip").on("click", function() {
 
 function nextQuestion() {
     currentBlank = 0;
-    totalBlanks = 0;
     answered = [];
 
     $(".buttonSkip").text("Skip");
@@ -76,12 +78,12 @@ function convertBlanksToSpans() {
         answered.push(false);
         iBlank++;
     }
-
-    // Store the total number of blanks in the question
-    totalBlanks = iBlank;
 }
 
 function selectBlank(iSpan) {
+    // Change incorrect answers back to normal
+    $("#answerButtons").children(".buttonIncorrect").removeClass("buttonIncorrect");
+
     // Change the previous blank if it was unanswered
     if(!answered[currentBlank]) {
         var prevSpan = $("#questionText").find("[data-index='" + currentBlank + "']");
@@ -96,24 +98,6 @@ function selectBlank(iSpan) {
     selectedSpan.removeClass("questionBlank").addClass("questionBlankSelected");
 }
 
-function selectNextBlank() {
-    currentBlank++;
-    if(currentBlank < totalBlanks) {
-        // Get the next blank
-        selectBlank(currentBlank);
-    } else {
-        // Go back to beginning to find unanswered blanks
-        var nextBlank = answered.findIndex(function(answer) { return answer === false; });
-        if(nextBlank >= 0) {
-            selectBlank(nextBlank);
-        } else {
-            // No more blanks, question is complete
-            $(".buttonSkip").text("Next");
-            $("#answerButtons").empty();
-        }
-    }
-}
-
 function correctAnswer(button) {
     answered[currentBlank] = true;
 
@@ -125,6 +109,14 @@ function correctAnswer(button) {
     // Remove the button that was clicked
     button.remove();
 
-    // Highlight the next blank
-    selectNextBlank();
+    // Go back to beginning to find unanswered blanks
+    currentBlank = answered.findIndex(function(answer) { return answer === false; });
+    if(currentBlank >= 0) {
+        // Highlight the next blank
+        selectBlank(currentBlank);
+    } else {
+        // No more blanks, question is complete
+        $(".buttonSkip").text("Next");
+        $("#answerButtons").empty();
+    }
 }
