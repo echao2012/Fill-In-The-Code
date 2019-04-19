@@ -34,13 +34,18 @@ $("#questionText").on("click", ".questionBlank", function() {
 });
 
 $(".buttonSkip").on("click", function() {
-    answered.forEach(function(item) {
-        if(item === false) {
-            incorrect++;
-        }
-    });
-    updateScore();
-    nextQuestion();
+    if(iQuestion < questions.length) {
+        answered.forEach(function(item) {
+            if(item === false) {
+                incorrect++;
+            }
+        });
+        updateScore();
+        nextQuestion();
+    } else {
+        // Redirect to profile page
+        window.location.href = "/start";
+    }
 });
 
 function nextQuestion() {
@@ -48,11 +53,19 @@ function nextQuestion() {
     answered = [];
 
     $(".buttonSkip").text("Skip");
+
     iQuestion++;
-    $("#questionNum").text(iQuestion + 1);
-    displayQuestion(questions[iQuestion]);
-    convertBlanksToSpans();
-    selectBlank(currentBlank);
+    if(iQuestion < questions.length) {
+        $("#questionNum").text(iQuestion + 1);
+        displayQuestion(questions[iQuestion]);
+        convertBlanksToSpans();
+        selectBlank(currentBlank);
+    } else {
+        // Quiz complete
+        $("#questionText").text("Quiz Complete");
+        $("#answerButtons").text("Final Score: " + Math.round(score));
+        $(".buttonSkip").text("My Profile");
+    }
 }
 
 function displayQuestion(questionInfo) {
@@ -133,6 +146,7 @@ function correctAnswer(button) {
         // No more blanks, question is complete
         $(".buttonSkip").text("Next");
         $("#answerButtons").empty();
+        $("#answerButtons").text("Correct");
     }
 }
 
