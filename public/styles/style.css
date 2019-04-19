@@ -8,6 +8,14 @@ body{
     font-size: 2em;
 }
 
+.navbar{
+    border-bottom: 1px solid black;
+}
+
+.nav-item{
+    margin-right: 25px;
+}
+
 .container{
     text-align: center;
     margin: auto;
@@ -32,7 +40,6 @@ hr{
     color: white;
     font-family: 'Dosis', 'Open Sans Condensed', sans-serif;
 }
-
 
 /* HTML, CSS & JScript Images*/
 .row{
@@ -81,25 +88,106 @@ hr{
     background-color: #0f7caa;
 }
 
-.modal-body{
-    background-color: #C1B8B8;
-    border-radius: 10px;
+.list-group-item {
+    line-height: 2.5;
 }
 
-/* Sign In/Up Buttons*/
-#sign-button1, #sign-button2{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.question {
+    width: 90%;
+    height:500px;
+    box-shadow: 10px 10px 40px grey;
+    border-radius: 12px;
+    margin: 10% auto 0 auto;
+    padding: 5%;
+    font-size: 2.5rem;
+    background-color: white;
 }
 
-.btn{
-    max-width: 600px;
+
+.buttonGuess {
+    font-size: 2.0rem;
+    box-shadow: 6px 9px #999;
+    background-color: black;
+    display: flexbox;
+    color:white;
+    border-radius:1.25rem;
+}
+
+.node{
+    height: 125.48;
+}
+
+#skip{
+    font-size: 2.5rem;
+    float: right;
+}
+
+.buttonTopic{
+    font-size: 2.0rem;
+    box-shadow: 6px 9px #9AE;
+    background-color: black;
+    display: flexbox;
+    color:white;
+    border-radius:1.25rem;
+}
+
+.buttonHome{
+    font-size: 1.5rem;
+    background-color: black;
+    display: flexbox;
+    color:white;
+    border-radius:1.25rem;
+}
+
+.buttonSkip{
+    font-size: 1.5rem;
+    background-color: black;
+    display: flexbox;
+    color:white;
+    border-radius:1.25rem;
+}
+
+.bottomRow{
+    margin:15x;
+}
+
+.button:hover {
+    background-color: gray;
+}
+
+.button:active {
+    background-color:gray;
+    box-shadow: 6px 9px #999;
+    transform: translate3d(4px);
+}
+
+.card-body, .btn{
+    font-family:  'Dosis', 'Open Sans Condensed', sans-serif;
+}
+
+.bottomRow{
+    position: relative;
+    bottom: -40px;
+    margin-bottom: 5px;
+}
+
+.questionBlank{
+    background-color: grey;
+}
+
+.questionBlankSelected{
+    background-color: yellow;
+}
+
+.questionBlankCorrect{
+    background-color: white;
+    color: green;
 }
 
 /* Nav Collapse & Links */
 /* Icon 1 */
 .animated-icon1, .animated-icon2, .animated-icon3 {
-    width: 30px;
+    width: 25px;
     height: 20px;
     position: relative;
     margin: 0px;
@@ -265,100 +353,4 @@ hr{
     top: 21px;
     left: 8px;
     }
-
-.list-group-item {
-    line-height: 2.5;
-}
-
-.question {
-    width: 90%;
-    height:500px;
-    box-shadow: 10px 10px 40px grey;
-    border-radius: 12px;
-    margin: 10% auto 0 auto;
-    padding: 5%;
-    font-size: 2.5rem;
-    background-color: white;
-}
-
-
-.buttonGuess {
-    font-size: 2.0rem;
-    box-shadow: 6px 9px #999;
-    background-color: black;
-    display: flexbox;
-    color:white;
-    border-radius:1.25rem;
-}
-
-.node{
-    height: 125.48;
-}
-
-#skip{
-    font-size: 2.5rem;
-    float: right;
-}
-
-.buttonTopic{
-    font-size: 2.0rem;
-    box-shadow: 6px 9px #9AE;
-    background-color: black;
-    display: flexbox;
-    color:white;
-    border-radius:1.25rem;
-}
-
-.buttonHome{
-    font-size: 1.5rem;
-    background-color: black;
-    display: flexbox;
-    color:white;
-    border-radius:1.25rem;
-}
-
-.buttonSkip{
-    font-size: 1.5rem;
-    background-color: black;
-    display: flexbox;
-    color:white;
-    border-radius:1.25rem;
-}
-
-.bottomRow{
-    margin:15x;
-}
-
-.button:hover {
-    background-color: gray;
-}
-
-.button:active {
-    background-color:gray;
-    box-shadow: 6px 9px #999;
-    transform: translate3d(4px);
-}
-
-.card-body, .btn{
-    font-family:  'Dosis', 'Open Sans Condensed', sans-serif;
-}
-
-.bottomRow{
-    position: relative;
-    bottom: -40px;
-    margin-bottom: 5px;
-}
-
-.questionBlank{
-    background-color: grey;
-}
-
-.questionBlankSelected{
-    background-color: yellow;
-}
-
-.questionBlankCorrect{
-    background-color: white;
-    color: green;
-}
 
