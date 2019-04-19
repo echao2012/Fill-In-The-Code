@@ -6,5 +6,11 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
+    User.associate = function(models) {
+        User.hasMany(models.History, {
+            onDelete: "cascade"
+        });
+    };
+
     return User;
 };
