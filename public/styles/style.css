@@ -280,13 +280,17 @@ hr{
     border-radius: 12px;
     margin: 10% auto 0 auto;
     padding: 5%;
-    font-size: 0.rem;
+    font-size: 2.0rem;
     font-family: 'Nanum Gothic Coding', monospace;
     background-color: white;
     position: relative;
     flex-wrap: wrap;
 }
 
+/*Size of text for each question*/
+#questionText{
+    font-size: 2.0rem;
+}
 
 .buttonGuess {
     font-size: 0.875rem;
@@ -298,7 +302,7 @@ hr{
     white-space: normal;
     max-width: 100%;
     word-wrap: break-word;
-    margin: 7px;
+    margin:7px;
 }
 
 .node{
