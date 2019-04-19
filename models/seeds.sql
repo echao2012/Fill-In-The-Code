@@ -206,3 +206,64 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("transform", -1, "2019-04-17", "2019-04-15", 30);
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("text-transform", 0, "2019-04-17", "2019-04-15", 30); -- correct answer
 
+-- MySQL
+-- 1
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The default port for MySQL Server is ????.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("8080", -1, "2019-04-15", "2019-04-15", 21);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("3306", 0, "2019-04-16", "2019-04-15", 21); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("3000", -1, "2019-04-17", "2019-04-15", 21);
+
+-- 2
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To query the data in the 'LastName column from the Employees' table you would choose, ???? LastName ???? Employees.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("SELECT", 0, "2019-04-15", "2019-04-15", 22); --  1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("GET", -1, "2019-04-16", "2019-04-15", 22); 
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("FROM", 1, "2019-04-17", "2019-04-15", 22); --  2nd correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("IN", -1, "2019-04-17", "2019-04-15", 22);
+
+-- 3
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To make a new table in the database you will use, ???? TABLE exampleDB.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("MAKE", -1, "2019-04-15", "2019-04-15", 23);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", 0, "2019-04-16", "2019-04-15", 23); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NEW", -1, "2019-04-17", "2019-04-15", 23);
+
+-- 4
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Adding a row to a table is done by ????.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ADD", -1, "2019-04-15", "2019-04-15", 24);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", -1, "2019-04-16", "2019-04-15", 24);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("INSERT", 0, "2019-04-17", "2019-04-15", 24); -- correct answer
+
+-- 5
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To delete a table called XXX you will use, ???? TABLE XXX.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("DROP", 0, "2019-04-15", "2019-04-15", 25); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("DELETE", -1, "2019-04-16", "2019-04-15", 25);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("REMOVE", -1, "2019-04-17", "2019-04-15", 25); 
+
+-- 6
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To see the data in all columns of a table you would use SELECT ???? FROM exampleDB.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ALL", -1, "2019-04-15", "2019-04-15", 26);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("*", 0, "2019-04-16", "2019-04-15", 26); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ENTIRE", -1, "2019-04-17", "2019-04-15", 26);
+
+-- 7
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To produce a new database you you would use the statement ????.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", 0, "2019-04-15", "2019-04-15", 27); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("MAKE", -1, "2019-04-16", "2019-04-15", 27);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NEW", -1, "2019-04-17", "2019-04-15", 27);
+
+-- 8
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To select a database to work with you the statement would be ???? exampleDB.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("RUN", -1, "2019-04-15", "2019-04-15", 28);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("USE", 0, "2019-04-16", "2019-04-15", 28); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ENABLE", -1, "2019-04-17", "2019-04-15", 28);
+
+-- 9
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("This join returns those records which have matching values in both the tables.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("FULL JOIN", -1, "2019-04-15", "2019-04-15", 29);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("INNER JOIN", 0, "2019-04-16", "2019-04-15", 29); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UNION", -1, "2019-04-17", "2019-04-15", 29);
+
+-- 10
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To change values in an existing database you would, ???? exampleInfo.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CHANGE", -1, "2019-04-15", "2019-04-15", 30);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("REPLACE", -1, "2019-04-16", "2019-04-15", 30);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UPDATE", 0, "2019-04-15", 30); -- correct answer

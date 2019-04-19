@@ -96,7 +96,7 @@ hr{
     max-width: 100%;
     box-shadow: 10px 10px 40px grey;
     border-radius: 12px;
-    margin: 10% auto 0 auto;
+    margin: 10px auto 0 auto;
     padding: 5%;
     font-size: 2.0rem;
     font-family: 'Nanum Gothic Coding', monospace;
@@ -122,6 +122,10 @@ hr{
     max-width: 100%;
     word-wrap: break-word;
     margin:7px;
+}
+
+.buttonIncorrect {
+    background-color: red;
 }
 
 .node{
