@@ -91,6 +91,26 @@ module.exports = function (app) {
         });
     });
 
+    // route for getting a user's quiz history
+    app.get("/api/history", function (req, res) {
+        db.User.findOne({
+            where: {
+                email: req.user.emails[0].value
+            },
+            include: [db.History]
+        }).then(function(dbQuestion) {
+            res.json(dbQuestion);
+        });
+    });
+
+    // route for adding a new quiz history
+    app.post("/api/history", function(req, res) {
+        db.History.create(req.body).then(function(dbHistory) {
+            
+            res.json(dbHistory);
+        });
+    });
+
     // test page to confirm whether user is authenticated or not
     app.get("/protected", accessProtectionMiddleware, function (req, res) {
 
