@@ -193,11 +193,17 @@ hr{
 }
 
 .questionBlank{
-    background-color: grey;
+    background-color: lightgrey;
+    border: 5px dashed darkgrey;
+    border-radius: 10px;
+    padding: 0px 20px;
 }
 
 .questionBlankSelected{
-    background-color: yellow;
+    background-color: #9AE;
+    border: 5px dashed black;
+    border-radius: 10px;
+    padding: 0px 20px;
 }
 
 .questionBlankCorrect{
@@ -377,16 +383,37 @@ hr{
 
     @media screen and (max-width: 960px) {
         #questionText {
-          font-size: 2.5rem;
+          font-size: 1.8rem;
+        }
+
+        .questionBlank,
+        .questionBlankSelected {
+            border-width: 4px;
+            border-radius: 9px;
+            padding: 0px 18px;
         }
       }
     @media screen and (max-width: 700px) {
         #questionText {
           font-size: 1.5rem;
         }
+
+        .questionBlank,
+        .questionBlankSelected {
+            border-width: 3px;
+            border-radius: 8px;
+            padding: 0px 15px;
+        }
       }
     @media screen and (max-width: 450px) {
         #questionText {
           font-size: 1.0rem;
+        }
+
+        .questionBlank,
+        .questionBlankSelected {
+            border-width: 2px;
+            border-radius: 7px;
+            padding: 0px 10px;
         }
       }

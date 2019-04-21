@@ -276,6 +276,68 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UPDATE", 0, "2019-04-15", "2019-04-17", 40); -- correct answer
 
 
+-- Node.js
+-- 1
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Which module is used for file based operations? ????", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("__filename", -1, "2019-04-15", "2019-04-15", 41);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("fs", 0, "2019-04-16", "2019-04-15", 41); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("http", -1, "2019-04-17", "2019-04-15", 41);
+
+-- 2
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The fs module provides both synchronous as well as asynchronous methods. ????", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("True", 0, "2019-04-15", "2019-04-15", 42); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("False", -1, "2019-04-16", "2019-04-15", 42);
+
+-- 3
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("A ???? function is called at the completion of a given task.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("return", -1, "2019-04-15", "2019-04-15", 43);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callback", 0, "2019-04-16", "2019-04-15", 43); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("console.log", -1, "2019-04-17", "2019-04-15", 43);
+
+-- 4
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The ???? object represents the event completion or failure of an asynchronous operation, and its resulting value.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("End", -1, "2019-04-15", "2019-04-15", 44);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Callback", -1, "2019-04-16", "2019-04-15", 44);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Promise", 0, "2019-04-17", "2019-04-15", 44); -- correct answer
+
+-- 5
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("In which language is Node.js is written?", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("C#", -1, "2019-04-15", "2019-04-15", 45);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Javascript", 0, "2019-04-16", "2019-04-15", 45); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Java", -1, "2019-04-17", "2019-04-15", 45); 
+
+-- 6
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Installing packages is done with ???? install in the command line.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Node", -1, "2019-04-15", "2019-04-15", 46);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("RUN", -1, "2019-04-16", "2019-04-15", 46);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NPM", 0, "2019-04-17", "2019-04-15", 46); -- correct answer
+
+-- 7
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The function used to run the callback after some time is ????.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("setTimeout()", 0, "2019-04-15", "2019-04-15", 47); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("return()", -1, "2019-04-16", "2019-04-15", 47);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callbackRun()", -1, "2019-04-17", "2019-04-15", 47);
+
+-- 8
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Nodejs is an ????, and ???? threaded JavaScript based platform.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("synchronous", -1, "2019-04-15", "2019-04-15", 48);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("asynchronous", 0, "2019-04-16", "2019-04-15", 48); --  1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("multi", -1, "2019-04-17", "2019-04-15", 48);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("single", 1, "2019-04-17", "2019-04-15", 48); --  2nd correct answer
+
+-- 9
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("???? are objects which will let you read the data from the source and write data to a destination as a continuous process.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Encoding", -1, "2019-04-15", "2019-04-15", 49);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Chains", -1, "2019-04-16", "2019-04-15", 49);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Streams", 0, "2019-04-17", "2019-04-15", 49); -- correct answer
+
+-- 10
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("A generic piece of code which runs in between several asynchronous function calls is known as ???? flow function.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("control", 0, "2019-04-15", "2019-04-15", 50); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("upstream", -1, "2019-04-16", "2019-04-15", 50);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callback", -1, "2019-04-15", 50);
+
+
 
 -- Sequelize
 -- 1
@@ -351,3 +413,5 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("QueryChainer", 0, "2019-04-16", "2019-04-15", 60); -- correct answer
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("QueryUtils", -1, "2019-04-17", "2019-04-15", 60); 
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("add", -1, "2019-04-17", "2019-04-15", 60); 
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UPDATE", 0, "2019-04-15", 40); -- correct answer
+
