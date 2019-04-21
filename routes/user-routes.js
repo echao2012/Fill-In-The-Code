@@ -71,7 +71,7 @@ module.exports = function (app) {
 
     // Load question page and pass in a question by id
     app.get("/topic/:topic", accessProtectionMiddleware, function (req, res) {
-        res.render("question");
+        res.render("question", {email: req.user.emails[0].value});
     });
 
     // route for user's profile page
