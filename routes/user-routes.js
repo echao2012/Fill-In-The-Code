@@ -64,12 +64,12 @@ module.exports = function (app) {
 
     // route for main page once logged in
     app.get("/start", accessProtectionMiddleware, function (req, res) {
-        res.render("start");
+        res.render("start", {email: req.user.emails[0].value});
     });
 
     // Load question page and pass in a question by id
     app.get("/topic/:topic", accessProtectionMiddleware, function (req, res) {
-        res.render("question");
+        res.render("question", {email: req.user.emails[0].value});
     });
 
     // route for user's profile page
@@ -82,7 +82,8 @@ module.exports = function (app) {
             order: [[db.History, "createdAt", "DESC"]]
         }).then(function(dbUser) {
             res.render("profile", {
-                user: dbUser
+                user: dbUser,
+                email: req.user.emails[0].value
             });
         });
     });

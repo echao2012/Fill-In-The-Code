@@ -41,6 +41,12 @@ hr{
     font-family: 'Dosis', 'Open Sans Condensed', sans-serif;
 }
 
+#log-status{
+    border-bottom: 1px solid black;
+    background:darkgrey;
+    text-align: center;
+}
+
 /* HTML, CSS & JScript Images*/
 .row{
     position: relative;

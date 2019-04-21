@@ -44,7 +44,7 @@ $(".buttonSkip").on("click", function() {
         nextQuestion();
     } else {
         // Redirect to profile page
-        window.location.href = "/start";
+        window.location.href = "/profile";
     }
 });
 
@@ -65,7 +65,7 @@ function nextQuestion() {
         addHistory();
         $("#questionText").text("Quiz Complete");
         $("#answerButtons").text("Final Score: " + Math.round(score));
-        $(".buttonSkip").text("Take another quiz");
+        $(".buttonSkip").text("View My Profile");
     }
 }
 
