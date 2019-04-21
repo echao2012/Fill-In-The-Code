@@ -52,8 +52,7 @@ module.exports = function (app) {
                 // else create them in the database and then redirect to the homepage
                 else {
                     db.User.create({
-                        email: req.user.emails[0].value,
-                        joined: req.user.createdAt,
+                        email: req.user.emails[0].value
                     }).then(function () {
                         res.redirect("/start");
                     });
