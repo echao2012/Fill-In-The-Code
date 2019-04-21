@@ -21,7 +21,7 @@ module.exports = function(app) {
     app.get("/api/answers/:id", function(req, res) {
         db.Answer.findOne({
             where: {
-                id: req.aprams.id
+                id: req.params.id
             },
             include: [db.Question]
         }).then(function(dbAnswer) {
