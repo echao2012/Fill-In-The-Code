@@ -84,7 +84,8 @@ module.exports = function (app) {
             order: [[db.History, "createdAt", "DESC"]]
         }).then(function(dbUser) {
             res.render("profile", {
-                user: dbUser
+                user: dbUser,
+                email: req.user.emails[0].value
             });
         });
     });
