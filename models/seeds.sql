@@ -335,7 +335,7 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("A generic piece of code which runs in between several asynchronous function calls is known as ???? flow function.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("control", 0, "2019-04-15", "2019-04-15", 50); -- correct answer
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("upstream", -1, "2019-04-16", "2019-04-15", 50);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callback", -1, "2019-04-15", 50);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callback", -1, "2019-04-15", "2019-04-15", 50);
 
 
 
@@ -379,7 +379,7 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES (".model", -1, "2019-04-17", "2019-04-15", 55); 
 
 -- 6
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Use sequelize to create a 'string' type for a Title within a book.js file located in a 'model' folder:<br><br>var Sequelize = require('sequelize')<br><br>;var sequelize = require('../config/connection.js');<br><br>var Book = sequelize.define('book', {<br><br>&nbsp;&nbsp;&nbsp;&nbsp;title: ????.????<br><br>", "Sequelize", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Use sequelize to create a 'string' type for a Title within a book.js file located in a 'model' folder:<br><br>var Sequelize = require('sequelize');<br><br>var sequelize = require('../config/connection.js');<br><br>var Book = sequelize.define('book', {<br><br>&nbsp;&nbsp;&nbsp;&nbsp;title: ????.????<br><br>", "Sequelize", "2019-04-15", "2019-04-15T16:22:59.000");
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("STRING", 1, "2019-04-15", "2019-04-15", 56); -- 2nd correct answer
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("INT", -1, "2019-04-16", "2019-04-15", 56); 
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Sequelize", 0, "2019-04-17", "2019-04-15", 56); -- 1st correct answer
@@ -413,5 +413,3 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("QueryChainer", 0, "2019-04-16", "2019-04-15", 60); -- correct answer
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("QueryUtils", -1, "2019-04-17", "2019-04-15", 60); 
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("add", -1, "2019-04-17", "2019-04-15", 60); 
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UPDATE", 0, "2019-04-15", 40); -- correct answer
-
