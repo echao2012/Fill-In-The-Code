@@ -53,7 +53,8 @@ module.exports = function (app) {
                 // else create them in the database and then redirect to the homepage
                 else {
                     db.User.create({
-                        email: req.user.emails[0].value
+                        email: req.user.emails[0].value,
+                        joined: req.user.createdAt,
                     }).then(function () {
                         res.redirect("/start");
                     });
@@ -75,7 +76,7 @@ module.exports = function (app) {
 
     // route for user's profile page
     app.get("/profile", accessProtectionMiddleware, function (req, res) {
-        res.render("profile");
+        res.render("profile", {email: req.user.emails[0].value});
     });
 
     // route for looking up a user by email address
