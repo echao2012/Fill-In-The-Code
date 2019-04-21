@@ -22,6 +22,7 @@ module.exports = function (app) {
         });
     });
 
+    console.log("test");
     // Create a new user
     app.post("/api/users", function (req, res) {
         db.User.create(req.body).then(function (results) {
@@ -45,7 +46,7 @@ module.exports = function (app) {
                 }
             }).then(function (dbUser) {
                 // if they already exist, console.log a quick note to that effect and proceed with the redirect
-                if (dbUser[0].id) {
+                if (dbUser.length > 0) {
                     console.log("User " + dbUser[0].email + " already exists. Proceeding with login instead of another user creation.");
                     res.redirect("/start");
                 }
@@ -64,7 +65,7 @@ module.exports = function (app) {
 
     // route for main page once logged in
     app.get("/start", accessProtectionMiddleware, function (req, res) {
-        res.render("start");
+        res.render("start", {email: req.user.emails[0].value});
     });
 
     // Load question page and pass in a question by id
