@@ -45,7 +45,8 @@ module.exports = function (app) {
                 }
             }).then(function (dbUser) {
                 // if they already exist, console.log a quick note to that effect and proceed with the redirect
-                if (dbUser[0].id) {
+                // if (dbUser[0].id) {
+                if (dbUser[0] && dbUser[0].id) {
                     console.log("User " + dbUser[0].email + " already exists. Proceeding with login instead of another user creation.");
                     res.redirect("/start");
                 }
