@@ -46,11 +46,7 @@ module.exports = function (app) {
                 }
             }).then(function (dbUser) {
                 // if they already exist, console.log a quick note to that effect and proceed with the redirect
-<<<<<<< HEAD
-                if (dbUser.length > 0) {
-=======
                 if (dbUser[0] && dbUser[0].id) {
->>>>>>> master
                     console.log("User " + dbUser[0].email + " already exists. Proceeding with login instead of another user creation.");
                     res.redirect("/start");
                 }
@@ -80,9 +76,6 @@ module.exports = function (app) {
 
     // route for user's profile page
     app.get("/profile", accessProtectionMiddleware, function (req, res) {
-<<<<<<< HEAD
-        res.render("profile", {email: req.user.emails[0].value});
-=======
         db.User.findOne({
             where: {
                 email: req.user.emails[0].value
@@ -94,7 +87,6 @@ module.exports = function (app) {
                 user: dbUser
             });
         });
->>>>>>> master
     });
 
     // route for looking up a user by email address
