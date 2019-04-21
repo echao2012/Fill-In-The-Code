@@ -1,4 +1,4 @@
-var currentBlank, answered;
+var currentBlank, answered, topic;
 
 var iQuestion = -1;
 var questions = [];
@@ -7,7 +7,7 @@ var correct = 0;
 var incorrect = 0;
 
 $(document).ready(function() {
-    var topic = window.location.href.split("/").pop();
+    topic = window.location.href.split("/").pop();
     $.get("/api/questions/topic/" + topic, function(data) {
         questions = data;
         $("#totalQuestions").text(questions.length);
@@ -62,14 +62,15 @@ function nextQuestion() {
         selectBlank(currentBlank);
     } else {
         // Quiz complete
+        addHistory();
         $("#questionText").text("Quiz Complete");
         $("#answerButtons").text("Final Score: " + Math.round(score));
-        $(".buttonSkip").text("My Profile");
+        $(".buttonSkip").text("Take another quiz");
     }
 }
 
 function displayQuestion(questionInfo) {
-    $("#questionText").text(questionInfo.text);
+    $("#questionText").html(questionInfo.text);
     
     $("#answerButtons").empty();
     questionInfo.Answers.forEach(function(answer) {
@@ -153,4 +154,15 @@ function correctAnswer(button) {
 function updateScore() {
     score = (correct / (correct + incorrect)) * 100;
     $("#score").text(Math.round(score));
+}
+
+function addHistory() {
+    $.ajax({
+        method: "POST",
+        url: "/api/history",
+        data: {
+            topic: topic.toUpperCase(),
+            score: Math.round(score)
+        }
+    });
 }

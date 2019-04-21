@@ -46,7 +46,11 @@ module.exports = function (app) {
                 }
             }).then(function (dbUser) {
                 // if they already exist, console.log a quick note to that effect and proceed with the redirect
+<<<<<<< HEAD
                 if (dbUser.length > 0) {
+=======
+                if (dbUser[0] && dbUser[0].id) {
+>>>>>>> master
                     console.log("User " + dbUser[0].email + " already exists. Proceeding with login instead of another user creation.");
                     res.redirect("/start");
                 }
@@ -76,7 +80,21 @@ module.exports = function (app) {
 
     // route for user's profile page
     app.get("/profile", accessProtectionMiddleware, function (req, res) {
+<<<<<<< HEAD
         res.render("profile", {email: req.user.emails[0].value});
+=======
+        db.User.findOne({
+            where: {
+                email: req.user.emails[0].value
+            },
+            include: [db.History],
+            order: [[db.History, "createdAt", "DESC"]]
+        }).then(function(dbUser) {
+            res.render("profile", {
+                user: dbUser
+            });
+        });
+>>>>>>> master
     });
 
     // route for looking up a user by email address
@@ -86,9 +104,33 @@ module.exports = function (app) {
                 email: req.params.email
             }
         }).then(function (dbUser) {
-            res.json({
-                email: dbUser.email,
-                createdAt: dbUser.createdAt
+            res.json(dbUser);
+        });
+    });
+
+    // route for getting a user's quiz history
+    app.get("/api/history", accessProtectionMiddleware, function (req, res) {
+        db.User.findOne({
+            where: {
+                email: req.user.emails[0].value
+            },
+            include: [db.History]
+        }).then(function(dbUser) {
+            res.json(dbUser);
+        });
+    });
+
+    // route for adding a new quiz history
+    app.post("/api/history", accessProtectionMiddleware, function (req, res) {
+        db.User.findOne({
+            where: {
+                email: req.user.emails[0].value
+            }
+        }).then(function (dbUser) {
+            req.body.UserId = dbUser.id;
+            req.body.email = dbUser.email;
+            db.History.create(req.body).then(function(dbHistory) {
+                res.json(dbHistory);
             });
         });
     });

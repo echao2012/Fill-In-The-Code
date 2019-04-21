@@ -3,18 +3,22 @@
     <div class="jumbotron mt-4">
         <h3 id="user-email" class="display-4 text-center">Quiz History</h3>
         <h2 id="user-join" class="display-4 text-center"></h2>
-        <table>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Subject</th>
-                    <th>Correct Answers</th>
-                    <th>Wrong Answers</th>
+                    <th>Score</th>
+                    <th>Date</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                </tr>
+                    {{#each user.Histories}}
+                        <tr>
+                            <td>{{this.topic}}</td>
+                            <td>{{this.score}}</td>
+                            <td>{{this.createdAt}}</td>
+                        </tr>
+                    {{/each}}
             </tbody>
         </table>
         <a href="/start">← Back To Home</a>

@@ -63,43 +63,54 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 
 -- Javascript
 -- 1
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("You would write ???? in an alert box", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alert('Hello World');", 0, "2019-04-15", "2019-04-15", 11); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alertBox('Hello World');", -1, "2019-04-16", "2019-04-15", 11);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msg('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msgBox('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
+-- INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("You would write ???? in an alert box", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alert('Hello World');", 0, "2019-04-15", "2019-04-15", 11); -- correct answer
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("alertBox('Hello World');", -1, "2019-04-16", "2019-04-15", 11);
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msg('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
+-- INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("msgBox('Hello World');", -1, "2019-04-17", "2019-04-15", 11);
+
+--1
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Create a for loop that prints out the numbers 1 through 10:<br><br>for(var i = ????, i < ????, i++){<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br>}", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("1", 0, "2019-04-15", "2019-04-15", 11); -- 1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("0", -1, "2019-04-16", "2019-04-15", 11);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("9", -1, "2019-04-17", "2019-04-15", 11);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("10", 1, "2019-04-17", "2019-04-15", 11); --2nd correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("11", -1, "2019-04-17", "2019-04-15", 11);
 
 -- 2
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("How do you create a function in JavaScript?: ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("function myFunction()", 0, "2019-04-15", "2019-04-15", 12); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("function:myFunction()", -1, "2019-04-16", "2019-04-15", 12);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("function = myFunction()", -1, "2019-04-17", "2019-04-15", 12);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Create a function in JavaScript called 'myfunction':<br><br>function ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("myFunction()", 0, "2019-04-15", "2019-04-15", 12); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES (":myFunction()", -1, "2019-04-16", "2019-04-15", 12);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES (" = myFunction()", -1, "2019-04-17", "2019-04-15", 12);
 
 -- 3
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("How do you call a function named 'myFunction'?: ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Call a function named 'myFunction': ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("myFunction()", 0, "2019-04-15", "2019-04-15", 13); -- correct answer
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("call myFunction()", -1, "2019-04-16", "2019-04-15", 13);
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("call function myFunction()", -1, "2019-04-17", "2019-04-15", 13);
 
 -- 4
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("You would use ???? to add a comment in JavaScript", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("<!-- This is a comment-- >", -1, "2019-04-16", "2019-04-15", 14);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("//This is a comment", 0, "2019-04-15", "2019-04-15", 14); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("'This is a comment", -1, "2019-04-17", "2019-04-15", 14);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Add a comment in JavaScript with the text 'This is a comment':<br><br> ???? This is a comment ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("<!--", -1, "2019-04-16", "2019-04-15", 14);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("//", 0, "2019-04-15", "2019-04-15", 14); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("//", 1, "2019-04-15", "2019-04-15", 14); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("/*", -1, "2019-04-17", "2019-04-15", 14);
 
 -- 5
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("???? is the correct way to write a JavaScript", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = (1:'red', 2:'green', 3:'blue')", -1, "2019-04-15", "2019-04-15", 15); 
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')", -1, "2019-04-17", "2019-04-15", 15);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = ['red', 'green', 'blue']", 0, "2019-04-16", "2019-04-15", 15); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("var colors = 'red', 'green', 'blue'", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Create an array with Javascript variable named 'colors' that has indexes red, green and blue<br>var ???? = ???? 'red', 'green', 'blue' ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("colors", 0, "2019-04-15", "2019-04-15", 15); --1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("(", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES (")", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("[", 1, "2019-04-17", "2019-04-15", 15); --2nd correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("`", -1, "2019-04-17", "2019-04-15", 15);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("]", 2, "2019-04-17", "2019-04-15", 15); --3rd correct answer
 
 -- 6
-INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Use ???? to round the number 7.25 to the nearest integer", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("rnd(7.25)", -1, "2019-04-15", "2019-04-15", 16); 
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Math.rnd(7.25)", -1, "2019-04-17", "2019-04-15", 16);
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Round the number 7.25 to the nearest integer:????.????(7.25)", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("rnd", -1, "2019-04-15", "2019-04-15", 16); 
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Math", -1, "2019-04-17", "2019-04-15", 16);
 INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Math.round(7.25)", 0, "2019-04-16", "2019-04-15", 16); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("round(7.25)", -1, "2019-04-17", "2019-04-15", 16);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("round", -1, "2019-04-17", "2019-04-15", 16);
 
 -- 7
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("How do you find the number with the highest value of x and y?: ????", "JS", "2019-04-15", "2019-04-15T16:22:59.000");
@@ -198,61 +209,122 @@ INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId)
 -- MySQL
 -- 1
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The default port for MySQL Server is ????.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("8080", -1, "2019-04-15", "2019-04-15", 21);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("3306", 0, "2019-04-16", "2019-04-15", 21); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("3000", -1, "2019-04-17", "2019-04-15", 21);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("8080", -1, "2019-04-15", "2019-04-15", 31);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("3306", 0, "2019-04-16", "2019-04-15", 31); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("3000", -1, "2019-04-17", "2019-04-15", 31);
 
 -- 2
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To query the data in the 'LastName column from the Employees' table you would choose, ???? LastName ???? Employees.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("SELECT", 0, "2019-04-15", "2019-04-15", 22); --  1st correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("GET", -1, "2019-04-16", "2019-04-15", 22); 
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("FROM", 1, "2019-04-17", "2019-04-15", 22); --  2nd correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("IN", -1, "2019-04-17", "2019-04-15", 22);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("SELECT", 0, "2019-04-15", "2019-04-15", 32); --  1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("GET", -1, "2019-04-16", "2019-04-15", 32); 
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("FROM", 1, "2019-04-17", "2019-04-15", 32); --  2nd correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("IN", -1, "2019-04-17", "2019-04-15", 32);
 
 -- 3
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To make a new table in the database you will use, ???? TABLE exampleDB.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("MAKE", -1, "2019-04-15", "2019-04-15", 23);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", 0, "2019-04-16", "2019-04-15", 23); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NEW", -1, "2019-04-17", "2019-04-15", 23);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("MAKE", -1, "2019-04-15", "2019-04-15", 33);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", 0, "2019-04-16", "2019-04-15", 33); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NEW", -1, "2019-04-17", "2019-04-15", 33);
 
 -- 4
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Adding a row to a table is done by ????.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ADD", -1, "2019-04-15", "2019-04-15", 24);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", -1, "2019-04-16", "2019-04-15", 24);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("INSERT", 0, "2019-04-17", "2019-04-15", 24); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ADD", -1, "2019-04-15", "2019-04-15", 34);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", -1, "2019-04-16", "2019-04-15", 34);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("INSERT", 0, "2019-04-17", "2019-04-15", 34); -- correct answer
 
 -- 5
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To delete a table called XXX you will use, ???? TABLE XXX.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("DROP", 0, "2019-04-15", "2019-04-15", 25); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("DELETE", -1, "2019-04-16", "2019-04-15", 25);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("REMOVE", -1, "2019-04-17", "2019-04-15", 25); 
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("DROP", 0, "2019-04-15", "2019-04-15", 35); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("DELETE", -1, "2019-04-16", "2019-04-15", 35);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("REMOVE", -1, "2019-04-17", "2019-04-15", 35); 
 
 -- 6
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To see the data in all columns of a table you would use SELECT ???? FROM exampleDB.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ALL", -1, "2019-04-15", "2019-04-15", 26);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("*", 0, "2019-04-16", "2019-04-15", 26); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ENTIRE", -1, "2019-04-17", "2019-04-15", 26);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ALL", -1, "2019-04-15", "2019-04-15", 36);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("*", 0, "2019-04-16", "2019-04-15", 36); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ENTIRE", -1, "2019-04-17", "2019-04-15", 36);
 
 -- 7
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To produce a new database you you would use the statement ????.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", 0, "2019-04-15", "2019-04-15", 27); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("MAKE", -1, "2019-04-16", "2019-04-15", 27);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NEW", -1, "2019-04-17", "2019-04-15", 27);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CREATE", 0, "2019-04-15", "2019-04-15", 37); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("MAKE", -1, "2019-04-16", "2019-04-15", 37);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NEW", -1, "2019-04-17", "2019-04-15", 37);
 
 -- 8
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To select a database to work with you the statement would be ???? exampleDB.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("RUN", -1, "2019-04-15", "2019-04-15", 28);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("USE", 0, "2019-04-16", "2019-04-15", 28); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ENABLE", -1, "2019-04-17", "2019-04-15", 28);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("RUN", -1, "2019-04-15", "2019-04-15", 38);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("USE", 0, "2019-04-16", "2019-04-15", 38); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("ENABLE", -1, "2019-04-17", "2019-04-15", 38);
 
 -- 9
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("This join returns those records which have matching values in both the tables.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("FULL JOIN", -1, "2019-04-15", "2019-04-15", 29);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("INNER JOIN", 0, "2019-04-16", "2019-04-15", 29); -- correct answer
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UNION", -1, "2019-04-17", "2019-04-15", 29);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("FULL JOIN", -1, "2019-04-15", "2019-04-15", 39);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("INNER JOIN", 0, "2019-04-16", "2019-04-15", 39); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UNION", -1, "2019-04-17", "2019-04-15", 39);
 
 -- 10
 INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("To change values in an existing database you would, ???? exampleInfo.", "MySQL", "2019-04-15", "2019-04-15T16:22:59.000");
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CHANGE", -1, "2019-04-15", "2019-04-15", 30);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("REPLACE", -1, "2019-04-16", "2019-04-15", 30);
-INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UPDATE", 0, "2019-04-15", 30); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("CHANGE", -1, "2019-04-15", "2019-04-15", 40);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("REPLACE", -1, "2019-04-16", "2019-04-15", 40);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("UPDATE", 0, "2019-04-15", 40); -- correct answer
+
+-- Node.js
+-- 1
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Which module is used for file based operations? ????", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("__filename", -1, "2019-04-15", "2019-04-15", 41);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("fs", 0, "2019-04-16", "2019-04-15", 41); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("http", -1, "2019-04-17", "2019-04-15", 41);
+
+-- 2
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The fs module provides both synchronous as well as asynchronous methods. ????", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("True", 0, "2019-04-15", "2019-04-15", 42); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("False", -1, "2019-04-16", "2019-04-15", 42);
+
+-- 3
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("A ???? function is called at the completion of a given task.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("return", -1, "2019-04-15", "2019-04-15", 43);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callback", 0, "2019-04-16", "2019-04-15", 43); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("console.log", -1, "2019-04-17", "2019-04-15", 43);
+
+-- 4
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The ???? object represents the event completion or failure of an asynchronous operation, and its resulting value.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("End", -1, "2019-04-15", "2019-04-15", 44);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Callback", -1, "2019-04-16", "2019-04-15", 44);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Promise", 0, "2019-04-17", "2019-04-15", 44); -- correct answer
+
+-- 5
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("In which language is Node.js is written?", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("C#", -1, "2019-04-15", "2019-04-15", 45);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Javascript", 0, "2019-04-16", "2019-04-15", 45); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Java", -1, "2019-04-17", "2019-04-15", 45); 
+
+-- 6
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Installing packages is done with ???? install in the command line.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Node", -1, "2019-04-15", "2019-04-15", 46);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("RUN", -1, "2019-04-16", "2019-04-15", 46);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("NPM", 0, "2019-04-17", "2019-04-15", 46); -- correct answer
+
+-- 7
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("The function used to run the callback after some time is ????.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("setTimeout()", 0, "2019-04-15", "2019-04-15", 47); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("return()", -1, "2019-04-16", "2019-04-15", 47);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callbackRun()", -1, "2019-04-17", "2019-04-15", 47);
+
+-- 8
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("Nodejs is an ????, and ???? threaded JavaScript based platform.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("synchronous", -1, "2019-04-15", "2019-04-15", 48);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("asynchronous", 0, "2019-04-16", "2019-04-15", 48); --  1st correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("multi", -1, "2019-04-17", "2019-04-15", 48);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("single", 1, "2019-04-17", "2019-04-15", 48); --  2nd correct answer
+
+-- 9
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("???? are objects which will let you read the data from the source and write data to a destination as a continuous process.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Encoding", -1, "2019-04-15", "2019-04-15", 49);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Chains", -1, "2019-04-16", "2019-04-15", 49);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("Streams", 0, "2019-04-17", "2019-04-15", 49); -- correct answer
+
+-- 10
+INSERT INTO questions (text, topic, updatedAt, createdAt) VALUES ("A generic piece of code which runs in between several asynchronous function calls is known as ???? flow function.", "NodeJS", "2019-04-15", "2019-04-15T16:22:59.000");
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("control", 0, "2019-04-15", "2019-04-15", 50); -- correct answer
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("upstream", -1, "2019-04-16", "2019-04-15", 50);
+INSERT INTO answers (text, correctAnswerIndex, updatedAt, createdAt, QuestionId) VALUES ("callback", -1, "2019-04-15", 50);
